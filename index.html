@@ -9,7 +9,7 @@
         * {
           box-sizing: border-box;
           margin: 0;
-          padding: 20px;
+          padding: 10px;
         }
         
         html, body {
@@ -20,24 +20,18 @@
         
         body {
           align-items: center;
-          background-color: #ffd54f;
+          text-align: center;
+          background-color: #a8ff44;
           display: flex;
-          font-family: -apple-system, 
-            BlinkMacSystemFont, 
-            "Segoe UI", 
-            Roboto, 
-            Oxygen-Sans, 
-            Ubuntu, 
-            Cantarell, 
-            "Helvetica Neue", 
-            sans-serif;
-            justify-content: center;
-            flex-direction: column;
-  
+          font-family: "Courier New", Courier, monospace;
+          justify-content: center;
+          flex-direction: column;
         }
       
         .container {
-          color: #873bdf;
+          border-style: dotted;
+          border-color: #ffc506;
+          background-color: #e2ff3c;
           margin: 0 auto;
           text-align: center;
           display: flex;
@@ -47,26 +41,31 @@
         }
         
         h1 {
-          font-weight: bold;
+          color: #9900ff;
           letter-spacing: .125rem;
           text-transform: uppercase;
-          padding: 10px;
+          padding: 15px;
           text-align: center;
           width: 100%;
+          font-family: Copperplate, Papyrus, fantasy;
+          justify-content: center;
+          flex-direction: column;
+          font-size: 50px;
         }
         
         li {
           display: inline-block;
-          font-size: 1.5em;
+          font-size: 45px;
           list-style-type: none;
-          padding: 10px;
           text-transform: uppercase;
+          color: rgb(0, 150, 250);
         }
         
         li span {
           display: block;
-          font-size: 4.5rem;
           width: 100%;
+          color: rgb(129, 0, 43);
+          font-family: "Courier New", Courier, monospace;
         }
         
         .emoji {
@@ -81,15 +80,17 @@
         
         @media all and (max-width: 768px) {
           h1 {
-            font-size: calc(5rem * var(--smaller));
+           font-size: calc(4rem * var(--smaller));
+           justify-content: center;
+           flex-direction: column;
           }
           
           li {
-            font-size: calc(1.125rem * var(--smaller));
+            font-size: calc(1.9rem * var(--smaller));
           }
           
           li span {
-            font-size: calc(3.375rem * var(--smaller));
+            font-size: calc(3.5rem * var(--smaller));
           }
         }
         </style>
@@ -97,13 +98,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why Not Curious - Break</title>
+    <title>Why Not Curious - First Live</title>
 </head>
 <body>
-    <h1>WhyNotCurious is on a 10 min break. <br> Be back soon ~</h1>
-    <br>
-    <div class="container">
-        <h1 id="headline">Countdown to my first stream</h1>
+        <h1>Countdown to my first stream</h1>
+        <div class="container">
         <div id="countdown">
           <ul>
             <li><span id="days"></span>days</li>
@@ -118,7 +117,6 @@
           <span>🤡</span>
         </div>
       </div>
-    <p></p>
 
     <script>
     
