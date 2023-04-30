@@ -1,19 +1,6 @@
 <html lang="en">
 <head>
     <style>
-
-
-
-
-
-
-
-
-
-
-
-
-
         /* general styling */
         :root {
           --smaller: .75;
@@ -22,11 +9,12 @@
         * {
           box-sizing: border-box;
           margin: 0;
-          padding: 0;
+          padding: 20px;
         }
         
         html, body {
           height: 100%;
+          width: 100%;
           margin: 0;
         }
         
@@ -43,46 +31,57 @@
             Cantarell, 
             "Helvetica Neue", 
             sans-serif;
+            justify-content: center;
+            flex-direction: column;
+  
         }
-        
+      
         .container {
-          color: #333;
+          color: #873bdf;
           margin: 0 auto;
           text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
         }
         
         h1 {
-          font-weight: normal;
+          font-weight: bold;
           letter-spacing: .125rem;
           text-transform: uppercase;
+          padding: 10px;
+          text-align: center;
+          width: 100%;
         }
         
         li {
           display: inline-block;
           font-size: 1.5em;
           list-style-type: none;
-          padding: 1em;
+          padding: 10px;
           text-transform: uppercase;
         }
         
         li span {
           display: block;
           font-size: 4.5rem;
+          width: 100%;
         }
         
         .emoji {
           display: none;
-          padding: 1rem;
+          padding: 10px;
         }
         
         .emoji span {
           font-size: 4rem;
-          padding: 0 .5rem;
+          padding: 10px;
         }
         
         @media all and (max-width: 768px) {
           h1 {
-            font-size: calc(1.5rem * var(--smaller));
+            font-size: calc(5rem * var(--smaller));
           }
           
           li {
@@ -101,9 +100,10 @@
     <title>Why Not Curious - Break</title>
 </head>
 <body>
-    <h1>WhyNotCurious is on a 10 min break. Be back soon ~</h1>
+    <h1>WhyNotCurious is on a 10 min break. <br> Be back soon ~</h1>
+    <br>
     <div class="container">
-        <h1 id="headline">Countdown to my birthday</h1>
+        <h1 id="headline">Countdown to my first stream</h1>
         <div id="countdown">
           <ul>
             <li><span id="days"></span>days</li>
@@ -113,12 +113,13 @@
           </ul>
         </div>
         <div id="content" class="emoji">
-          <span>🥳</span>
-          <span>🎉</span>
-          <span>🎂</span>
+          <span>🤡</span>
+          <span>🤡</span>
+          <span>🤡</span>
         </div>
       </div>
     <p></p>
+
     <script>
     
     (function () {
@@ -135,12 +136,13 @@
             yyyy = today.getFullYear(),
             nextYear = yyyy + 1,
             dayMonth = "05/18/2023",
-            stream = dayMonth + yyyy;
+            stream = dayMonth;
         
         today = mm + "/" + dd + "/" + yyyy;
         if (today > stream) {
-          stream = dayMonth + nextYear;
+          stream = dayMonth;
         }
+
         //end
         
         const countDown = new Date(stream).getTime(),
@@ -158,7 +160,7 @@
               if (distance < 0) {
                 document.getElementById("headline").innerText = "It's my stream start!";
                 document.getElementById("countdown").style.display = "none";
-                document.getElementById("content").style.display = "block";
+                document.getElementById("content").style.display = "none";
                 clearInterval(x);
               }
               //seconds
