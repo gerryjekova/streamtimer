@@ -44,15 +44,19 @@
           color: #9900ff;
           letter-spacing: .125rem;
           text-transform: uppercase;
-          padding: 15px;
+          padding: 20px;
           text-align: center;
           width: 100%;
           font-family: Copperplate, Papyrus, fantasy;
           justify-content: center;
           flex-direction: column;
-          font-size: 50px;
+          font-size: 46px;
         }
         
+        line {
+          padding: 20px;
+        }
+
         li {
           display: inline-block;
           font-size: 45px;
@@ -101,7 +105,8 @@
     <title>Why Not Curious - First Live</title>
 </head>
 <body>
-        <h1>Countdown to my first stream</h1>
+        <h1>first broadcast:</h1>
+        <line></line>
         <div class="container">
         <div id="countdown">
           <ul>
@@ -112,8 +117,6 @@
           </ul>
         </div>
         <div id="content" class="emoji">
-          <span>🤡</span>
-          <span>🤡</span>
           <span>🤡</span>
         </div>
       </div>
@@ -126,22 +129,18 @@
               hour = minute * 60,
               day = hour * 24;
       
-        //I'm adding this section so I don't have to keep updating this pen every year :-)
-        //remove this if you don't need it
         let today = new Date(),
             dd = String(today.getDate()).padStart(2, "0"),
             mm = String(today.getMonth() + 1).padStart(2, "0"),
             yyyy = today.getFullYear(),
             nextYear = yyyy + 1,
-            dayMonth = "05/18/2023",
+            dayMonth = "05/01/2023",
             stream = dayMonth;
         
         today = mm + "/" + dd + "/" + yyyy;
         if (today > stream) {
           stream = dayMonth;
         }
-
-        //end
         
         const countDown = new Date(stream).getTime(),
             x = setInterval(function() {    
@@ -154,14 +153,14 @@
                 document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
                 document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
       
-              //do something later when date is reached
+            
               if (distance < 0) {
                 document.getElementById("headline").innerText = "It's my stream start!";
                 document.getElementById("countdown").style.display = "none";
                 document.getElementById("content").style.display = "none";
                 clearInterval(x);
               }
-              //seconds
+              
             }, 0)
         }());
         
