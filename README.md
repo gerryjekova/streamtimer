@@ -1,2 +1,2 @@
 # streamtimer
-Timer for stream breaks~ 
+Countdown until stream start. (It's a test, so don't expect me to start then!! XD ...UNLESS)
